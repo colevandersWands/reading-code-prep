@@ -1,0 +1,17 @@
+{
+  "--defaults": {
+    ".md": "study"
+  },
+  "study": {
+    "run": true,
+    "flowchart": true,
+    "diff": true,
+    "save": true,
+    "trace": true
+  },
+  "highlight": {
+    "flowchart": true,
+    "diff": true
+  },
+  "port": 4004
+}
