@@ -35,6 +35,9 @@ here's an overview of the folders, grouped by a rough sequence. almost all of th
   - written in markdown for easy authoring and maintenance
 - [parsons](./parsons?--defaults)
   - these can actually be run, but it's not required
+- [phrase-book](./phrase-book?--defaults)
+  - common JS snippets that students can use to get productive, without understanding all the bits
+  - like a travel phrase book in a foreign language. no grammar, all translations of practical phrases
 - [pronunciation-manual](./pronunciation-manual?--defaults)
   - a guide to reading and pronouncing javascript
   - can be full phrases for common lines or just some phonology for base units
