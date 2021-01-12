@@ -22,6 +22,11 @@ students will follow their favorite of a few selected tutorials alongside this m
 
 here's an overview of the folders, grouped by a rough sequence. almost all of these are for self/group study. they wouldn't be required or submitted, students would only get feedback from coaches when they ask for it:
 
+## 0: things that aren't even on a computer
+
+- [printables](./printables)
+  - flashcards, diagrams, ... things to print and study on paper
+
 ## 1: things that don't involve running code or modifying code
 
 - [code-reading-questions](./code-reading-questions?--defaults)
