@@ -7,12 +7,10 @@ it will cover the basics of JS as a procedural language, touching on:
 - simple type coercion
   - Number() for processing user input from prompt
   - Boolean()/truthiness for understanding conditionals
-- arrays (basic access + push/pop/unshif/shift. no reference/value)
-- object (as data types, no methods. no reference/value)
 - conditionals
 - while loops
-- for, for-in, for-of
-- functions (arrow and statements)
+- for
+- for-of strings
 
 students will follow their favorite of a few selected tutorials alongside this module (to be listed in #suggested-study of the README)
 
