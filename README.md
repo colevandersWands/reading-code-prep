@@ -2,7 +2,7 @@
 
 ---
 
-# Reading Code
+# Welcome to JS
 
 >
 
@@ -145,6 +145,7 @@ Helpful links, examples and exercises.
 code-reading games
   http://compute-it.toxicode.fr/
   http://little-dot.toxicode.fr/
+  https://www.robomindacademy.com/course/robomind/HourOfCode/Getting%20started/0
 try some creative coding
   https://p5js.org
   [The Coding Train](https://thecodingtrain.com/) has a very good [programming tutorial based on P5.js](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6Zy51Q-x9tMWIv9cueOFTFA)
@@ -171,17 +172,20 @@ suggested resources
 - resource of your choice
   - through X of sololearn
   - through X of \_
-- take a first look through the pronunciation manual
-- practice using `study-lenses` with these directories:
-  - a
-  - b
-  - c
+- take a look through the pronunciation manual
+- install `study-lenses` and:
+  - open this directory: `$ study`
+  - navigate to this URL [./?--help](./?--help?)
+  - this is the study tool you will use for a lot of HYF
 
 ### During Class
 
-reading, running and tracing linear code
+- what is js?
+- reading and running linear code
 
 #### Before Break
+
+> reading code
 
 - what is code?
 - what is coding?
@@ -191,10 +195,11 @@ reading, running and tracing linear code
 
 #### After Break
 
+> running code
+
 - reading static code: `highlight` lense & code reading agenda
 - reading run code: `study`
   - using the `run` button
-  - using the `trace` button
 
 ### After Class
 
@@ -226,7 +231,6 @@ group project:
 - resource of your choice
   - through X of sololearn
   - through X of \_
-- begin `/describing-errors`
 
 ### During Class
 
@@ -234,17 +238,20 @@ group project:
 
 #### Before Break
 
-- loops
-- some group parsons problems
+- while loops
+- using the `trace` button
 
 #### After Break
 
-- functions
-- some group parsons problems
+> running code
+
+- for loops
 
 ### After Class
 
 continue working on last week's group project
+
+prepare for the Debugging by studying `/describing-errors`
 
 </details>
 <br>
