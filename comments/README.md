@@ -18,7 +18,7 @@ the big tips:
 
 ---
 
-## Rotten Comments
+## Stale Comments
 
 comments that did not change when the code changed
 
