@@ -1,4 +1,5 @@
 {
+  "--force": true,
   "--defaults": {
     ".md": "study"
   },
@@ -13,5 +14,5 @@
     "flowchart": true,
     "diff": true
   },
-  "port": 4004
+  "--port": 4004
 }

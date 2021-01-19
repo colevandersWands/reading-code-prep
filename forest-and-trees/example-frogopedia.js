@@ -8,6 +8,8 @@
 
 */
 
+// ----- declare variables to store program data -----
+
 /* declare userInput and assign empty string (implementation)
   (strategy)
   this is used to capture user input from the prompt
@@ -17,6 +19,9 @@ let userInput = '';
 /* declare inputIsAboutFrogs and assign false
   a boolean flag variable used to determine when the I/O loop is finished
 */
+
+// ----- gather user input -----
+
 let inputIsAboutFrogs = false;
 /* while loop
   this is the Input/Output loop where user input is validated
@@ -69,6 +74,8 @@ while (!inputIsAboutFrogs) {
   */
   alert('nope, not about frogs.  try again.');
 }
+
+// ----- generate and alert the final output -----
 
 /* declare finalMessage as a string containing the `userInput`
   by the time we're here, the I/O loop has ended so the input must be about frogs

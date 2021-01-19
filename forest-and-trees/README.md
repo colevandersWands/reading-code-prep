@@ -14,9 +14,14 @@ strategy (forest & trees): why part of what/why comments
   how does this line relate to other lines?
 -->
 
-# Forest & Trees
+# Forest and Trees
 
 When studying code to understand a new program, thinking of forests and trees might help.
+
+- [Forest](#forest)
+- [Trees](#trees)
+- [Forest & Trees](#forest--trees)
+- [Chunks](#chunks)
 
 ---
 
@@ -50,7 +55,7 @@ if (userInput.toLowerCase() === 'yes') {
 }
 ```
 
-[TOP](#code-reading-questions)
+[TOP](#forest-and-trees)
 
 ---
 
@@ -98,7 +103,7 @@ if (userInput.toLowerCase() === 'yes') {
 }
 ```
 
-[TOP](#code-reading-questions)
+[TOP](#forest-and-trees)
 
 ---
 
@@ -151,4 +156,53 @@ if (userInput.toLowerCase() === 'yes') {
 }
 ```
 
-[TOP](#code-reading-questions)
+[TOP](#forest-and-trees)
+
+---
+
+## Chunks
+
+So you see the forest and the trees? Time to see the chunks!
+
+A "chunk" of code is a group of lines that work together to achieve one main step in the program. One way to decide which lines belong to the same chunk is to look at your forest & tree comments. If you see a group of lines who's forest & tree comment server the same purpose, or who all seem to be necessary for the other, you may be looking at a chunk
+
+You can label these with commented line dividers and a short title.
+
+```js
+/*
+  this program asks a user to input "yes", with upper or lower case letters
+  these are some example correct inputs:
+  - YeS, yes, YEs, YES, ...
+
+  if the user inputs a valid string, they'll be congratulated.
+  otherwise they are not :(
+*/
+
+// ---- gather user input ----
+
+/* prompt the user for input and assign it to `userInput`
+  this line explains to the user what they need to input
+  the `userInput` variable is used later on to check if the user input a valid string
+*/
+const userInput = prompt('enter the word "yes", upper or lower case');
+
+// ----
+
+/* ! convert the `userInput` to lower case and compare it to the string "yes"
+  checking the user input to make sure they put in a valid string
+  this line uses .toLowerCase so that it doesn't matter what letter were upper or lower case
+*/
+if (userInput.toLowerCase() === 'yes') {
+  /* alert the user input concatenated with an exclamation mark
+    this is the path for valid user inputs
+    the user will be congratulated for following instructions
+  */
+  alert(userInput + '!');
+} else {
+  /* alert the user input concatenated with an exclamation mark
+    this is the path for invalid user inputs (things that aren't some form of "yes")
+    it will tell users that they messed up baaaaadly
+  */
+  alert('baaaaad: ' + userInput);
+}
+```

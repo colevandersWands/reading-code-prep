@@ -98,6 +98,8 @@ Not all assignments are created equal. These 3 emoji's will help you figure out 
 <br>
 
 ```
+smartize these
+
 what is programming?
 what are programming languages?
 learn language parts and vocab
@@ -132,15 +134,66 @@ Helpful links, examples and exercises.
 <summary>expand/collapse</summary>
 <br>
 
-🥚
-🐣
-🐥
+### In this Repo
+
+#### offline materials (needs a printer)
+
+- [printables](./printables) (if you have access to a printer)
+  - flashcards, diagrams, ... things to print and study on paper
+
+## rendered markdown
+
+- 🥚 [what-is-programming](./what-is-programming)
+  - just what it sounds like
+- 🥚 [code-reading-questions](./code-reading-questions)
+  - based off the agendas for Code Reading Club, but decomposed into a tool-belt of questions and investigative techniques students can use to read new files of code.
+  - this would be covered early on and used as a reference thereafter
+- 🥚 [concept-review](./concept-review)
+  - flash cards for reviewing what's covered in this
+  - scoped by the learning objectives to act as a self-assessment
+- 🥚 [vocabulary](./vocabulary)
+  - what it sounds like, vocab flashcards
+- 🐣 [phrase-book](./phrase-book)
+  - common JS snippets that students can use to get productive, without understanding all the bits
+  - like a travel phrase book in a foreign language. no grammar, all translations of practical phrases. goes both ways
+
+## javascript
+
+1. 🥚 [comments](./comments)
+   - a guide to the different ways comments can be used in code
+   - accompanied by files of code demonstrating different (good and bad) comments
+2. 🐣 [forest-and-trees](./forest-and-trees)
+   - a structured approach to deep reading files of code, along with a full commenting strategy
+   - not something to recommend doing in real projects but maybe helpful while learning
+3. 🐣 [naming-variables](./naming-variables)
+   - tips for writing good variable names
+   - exercises would be something like replacing bad variable names with better ones in working programs\
+4. 🐣 [logging](./logging)
+   - tips and strategies for logging code
+   - in the exercises students will be given un-logged code, and need to write in helpful logs
+   - leads right into debugging
+5. 🐣 [fill-in-blanks](./fill-in-blanks)
+   - different types of exercises built around filling in blanks in .js files
+
+## parsons
+
+- 🐣 [parsons](./parsons)
+  - these can actually be run, but it's not required
+
+## Read Only
+
+- [read-only](./read-only)
+  - files of more advanced code that students would not be expected to fully understand
+  - for practicing the code reading questions and gaining experience with un-understandable code
+
+### Elsewhere
 
 ```
  beginner-friendly tutorials
   sololearn
   launchcode
   codeacademy
+  first part of new watch and code
   another?
 code-reading games
   http://compute-it.toxicode.fr/
@@ -234,18 +287,20 @@ group project:
 
 ### During Class
 
-- reading, running and tracing non-linear code
+- for loops
 
 #### Before Break
 
-- while loops
-- using the `trace` button
+> reading code
+
+- for loops
 
 #### After Break
 
 > running code
 
 - for loops
+- the 'trace` button
 
 ### After Class
 
@@ -272,39 +327,4 @@ Screen recordings of class. Coaches, when sending your PR's with links please ..
 
 ---
 
-### Classes 9 & 10
-
-[Unmesh](https://github.com/unmeshvrije), [Sali](https://github.com/Sali-Almurshidi), [Ismaila](https://github.com/auloin), [Louis](https://github.com/Mamboleoo)
-
-#### Week 1
-
-1. [reading-code & Logging](https://vimeo.com/448445380)
-1. [Object vs. reading-code](https://vimeo.com/448849518)
-1. [Integrating reading-code](https://vimeo.com/448849847)
-
-#### Week 2
-
-1. [Project Planning & Isolate Rendering Data pt. 1](https://vimeo.com/451212160)
-1. [Isolate Rendering Data pt. 2 & Elements vs. Nodes](https://vimeo.com/451212701)
-1. [Integrate Rendering Data](https://vimeo.com/451213025)
-1. [Listener vs. Handler & Quiz Refactor pt. 1](https://vimeo.com/451213285)
-1. [Quiz Refactor pt. 2](https://vimeo.com/451213479)
-1. [Quiz Refactor pt. 3](https://vimeo.com/451213762)
-
-### class-11-12
-
-[Unmesh](https://github.com/unmeshvrije), [Thibault](https://github.com/ThibaultLesuisse)
-
-- Week 1:
-  - [reading-code, Logging and Rendering](https://vimeo.com/493708942)
-  - [JS Quiz Project](https://vimeo.com/493709184)
-- Week 2:
-
-  - [Part 1](https://vimeo.com/495147137)
-  - [Part 2](https://vimeo.com/495162820/a3a9aab641)
-
-[TOP](#reading-code)
-
-```
-
-```
+### class-13-14
