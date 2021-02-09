@@ -18,10 +18,10 @@ strategy (forest & trees): why part of what/why comments
 
 When studying code to understand a new program, thinking of forests and trees might help.
 
-- [Forest](#forest)
-- [Trees](#trees)
-- [Forest & Trees](#forest--trees)
-- [Chunks](#chunks)
+1. [Forest](#forest)
+2. [Trees](#trees)
+3. [Forest & Trees](#forest--trees)
+4. [Chunks](#chunks)
 
 ---
 
@@ -46,7 +46,7 @@ Understanding what the entire program does, without looking at any single line o
   otherwise they are not :(
 */
 
-const userInput = prompt('enter the word "yes", upper or lower case');
+let userInput = prompt('enter the word "yes", upper or lower case');
 
 if (userInput.toLowerCase() === 'yes') {
   alert(userInput + '!');
@@ -85,7 +85,7 @@ Understanding what each line of code does and how it works, without taking a ste
 /* prompt the user for input and assign it to `userInput`
 
 */
-const userInput = prompt('enter the word "yes", upper or lower case');
+let userInput = prompt('enter the word "yes", upper or lower case');
 
 /* ! convert the `userInput` to lower case and compare it to the string "yes"
 
@@ -135,7 +135,7 @@ Put together what you learned about the forest and the trees.
   this line explains to the user what they need to input
   the `userInput` variable is used later on to check if the user input a valid string
 */
-const userInput = prompt('enter the word "yes", upper or lower case');
+let userInput = prompt('enter the word "yes", upper or lower case');
 
 /* ! convert the `userInput` to lower case and compare it to the string "yes"
   checking the user input to make sure they put in a valid string
@@ -178,15 +178,15 @@ You can label these with commented line dividers and a short title.
   otherwise they are not :(
 */
 
-// ---- gather user input ----
+/* --- gather user input --- */
 
 /* prompt the user for input and assign it to `userInput`
   this line explains to the user what they need to input
   the `userInput` variable is used later on to check if the user input a valid string
 */
-const userInput = prompt('enter the word "yes", upper or lower case');
+let userInput = prompt('enter the word "yes", upper or lower case');
 
-// ----
+/* --- communicate the results --- */
 
 /* ! convert the `userInput` to lower case and compare it to the string "yes"
   checking the user input to make sure they put in a valid string

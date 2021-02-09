@@ -81,7 +81,7 @@ while (!inputIsAboutFrogs) {
   by the time we're here, the I/O loop has ended so the input must be about frogs
   insert the user's frog info into a formatted string to alert
 */
-const finalMessage =
+let finalMessage =
   'i just learned something cool about frogs!\n\n- "' + userInput + '"';
 /* alert the final message
   let the user know that they have entered a cool fact about frogs

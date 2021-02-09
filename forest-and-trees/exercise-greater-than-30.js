@@ -1,24 +1,21 @@
-'use strict';
-
-const promptMessage = 'please enter a number greater than 10';
-const userInput = prompt(promptMessage);
+let promptMessage = 'please enter a number greater than 10';
+let userInput = prompt(promptMessage);
 
 console.log('userInput:', typeof userInput, userInput);
 
 if (userInput === null || userInput === '') {
-  const noInputMessage = 'nothing!  why !!! ??? !!!';
+  let noInputMessage = 'nothing!  why !!! ??? !!!';
   alert(noInputMessage);
 } else {
-  const userNumber = Number(userInput);
+  let userNumber = Number(userInput);
 
   if (Number.isNaN(userNumber)) {
-    const isNaNMessage = '"' + userInput + '" is not a number';
-    alert(isNaNMessage);
+    alert('"' + userInput + '" is not a number');
   } else if (userNumber <= 10) {
-    const tooSmallMessage = userNumber + ' is less than 10';
-    alert(tooSmallMessage);
+    alert(userNumber + ' is less than 10 :(');
+  } else if (userNumber === 10) {
+    alert(userNumber + ' exactly ten :(');
   } else {
-    const perfectMessage = userNumber + ' is perfect!';
-    alert(perfectMessage);
+    alert(userNumber + ' is perfect!');
   }
 }
