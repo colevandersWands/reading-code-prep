@@ -7,6 +7,7 @@
 > about the programs in this directory
 >
 > - less progressive than forest & trees
+> - comments above each line with how to read it out loud
 > - focus on interesting interactions over understanding code
 > - pull from all "allowed" JS, including hatched chicks
 > - no logging, only interactions (cleaner code, no reason to open the console)

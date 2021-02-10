@@ -83,7 +83,7 @@ In this module you will only learn a small part of what JavaScript has to offer.
 
 Below is all the JavaScript you will find in this module's examples and exercises. Don't be mistaken, there's a lot you can do with only this!
 
-<details open>
+<details>
 <summary>expand/collapse</summary>
 
 ### For Developers
@@ -466,19 +466,18 @@ console.log('-- declare and assign --');
 
 // declaring a variable with let
 let favoriteTree;
-// it is helpful to log the variable's name and it's value
-console.log('favoriteTree:', favoriteTree); // undefined
+console.log(favoriteTree); // undefined
 
 // assigning a value to a variable
 favoriteTree = 'palm';
-console.log('favoriteTree:', favoriteTree); // 'palm'
+console.log(favoriteTree); // 'palm'
 // assigning a different value
 favoriteTree = 'oak';
-console.log('favoriteTree:', favoriteTree); // 'oak'
+console.log(favoriteTree); // 'oak'
 
 // declare and assign at the same time
 let bread = 'fresh';
-console.log('bread:', bread); // 'fresh'
+console.log(bread); // 'fresh'
 ```
 
 </details>
@@ -492,19 +491,19 @@ console.log('-- variables: different types --');
 
 // declare and assign a boolean value
 let variable = true;
-console.log('variable:', variable); // true
+console.log(variable); // true
 
 // assign a string to the variable
 variable = 'computers';
-console.log('variable:', variable); // 'computers'
+console.log(variable); // 'computers'
 
 // assign a number to the variable
 variable = 2;
-console.log('variable:', variable); // 2
+console.log(variable); // 2
 
 // and another boolean
 variable = false;
-console.log('variable:', variable); // false
+console.log(variable); // false
 ```
 
 </details>
@@ -517,19 +516,19 @@ console.log('-- assigning results --');
 
 // boolean logic
 let falseOrTrue = false || true;
-console.log('falseOrTrue:', falseOrTrue); // true
+console.log(falseOrTrue); // true
 
 // string concatenation
 let favoriteTree = 'p' + 'a' + 'l' + 'm';
-console.log('favoriteTree:', favoriteTree); // 'palm'
+console.log(favoriteTree); // 'palm'
 
 // replacing things in a string
 let noJoy = 'enjoy life'.replaceAll('joy', '');
-console.log('noJoy:', noJoy); // 'en life'
+console.log(noJoy); // 'en life'
 
 // searching a string with .includes
 let hasAnApple = 'bananaapplemango'.includes('apple');
-console.log('hasAnApple:', hasAnApple); // true
+console.log(hasAnApple); // true
 ```
 
 </details>
@@ -545,19 +544,19 @@ console.log('-- reading variables --');
 // operate on a string stored in a variable
 let loudCar = 'vrooom'.toUpperCase();
 let excitedCar = loudCar.replaceAll('O', '!');
-console.log('excitedCar:', excitedCar); // 'VR!!!M'
+console.log(excitedCar); // 'VR!!!M'
 
 // use a string stored in a variable as an argument
 let badLetter = 'f';
 let goodLetter = 'd';
 let happyAnimal = 'fog'.replaceAll(badLetter, goodLetter);
-console.log('happyAnimal:', happyAnimal); // 'dog'
+console.log(happyAnimal); // 'dog'
 
 // all together
 let characterName = '  harry potter   '.trim();
 let titleLowerCase = 'Harry Potter and the Magical Thing'.toLowerCase();
 let includesName = titleLowerCase.includes(characterName);
-console.log('includesName:', includesName); // true
+console.log(includesName); // true
 ```
 
 </details>
@@ -578,7 +577,7 @@ console.log('-- ReferenceError 2 --');
 
 // a common mistake is spelling your variables incorrectly
 let spellingMistake = 'oops!';
-console.log('spellingMistake:', spelingMistake); // ReferenceError: spelingMistake is not defined
+console.log(spelingMistake); // ReferenceError: spelingMistake is not defined
 ```
 
 </details>
@@ -590,17 +589,17 @@ console.log('-- block scope --');
 
 // variables declared outside of curley are available inside the curley braces
 let globalVariable = 'declared outside';
-console.log('globalVariable:', globalVariable);
+console.log(globalVariable);
 {
   globalVariable = 're-assigned inside';
-  console.log('globalVariable:', globalVariable); // 're-assigned inside'
+  console.log(globalVariable); // 're-assigned inside'
 
   // variables declared inside the curley braces are NOT availabe outside of them
   let blockVariable = 'declared inside';
-  console.log('blockVariable:', blockVariable); // 'declared inside'
+  console.log(blockVariable); // 'declared inside'
 }
-console.log('globalVariable:', globalVariable); // 're-assigned inside'
-console.log('blockVariable:', blockVariable); // ReferenceError: blockVariable is not defined
+console.log(globalVariable); // 're-assigned inside'
+console.log(blockVariable); // ReferenceError: blockVariable is not defined
 
 // PS. this also works with conditionals and while loops
 //     you will not need to use blocks without a condition or loop
@@ -665,12 +664,12 @@ console.log('-- variables with undefined --');
 
 // variables have the value undefined if you do not assign anything
 let variable;
-console.log('variable:', variable); // undefined
+console.log(variable); // undefined
 console.log(typeof variable); // 'undefined'
 
 // assigning undefined to a variable is the same  as not assigning anything
 variable = undefined;
-console.log('variable:', variable); // undefined
+console.log(variable); // undefined
 console.log(typeof variable); // 'undefined'
 ```
 
@@ -734,17 +733,17 @@ console.log('-- variables with null --');
 
 // you need to assign null to a variable, it does not happen by accident
 let variable;
-console.log('variable:', variable); // undefined
-console.log('typeof variable:', typeof variable); // 'undefined'
+console.log(variable); // undefined
+console.log(typeof variable); // 'undefined'
 
 variable = null;
-console.log('variable:', variable); // null
+console.log(variable); // null
 console.log(typeof variable); // 'object'
 
 // you can also assign null in the same line as declaring a variable
 let breakfast = null;
-console.log('breakfast:', breakfast);
-console.log('typeof breakfast:', typeof breakfast);
+console.log(breakfast);
+console.log(typeof breakfast);
 ```
 
 </details>
@@ -765,8 +764,8 @@ console.log('-- alert --');
 let alerted = alert('pancakes');
 
 // alert will always return undefined, no matter what
-console.log('alerted:', alerted); // undefined
-console.log('typeof alerted:', typeof alerted); // 'undefined'
+console.log(alerted); // undefined
+console.log(typeof alerted); // 'undefined'
 ```
 
 </details>
@@ -787,8 +786,8 @@ let confirmed = confirm('want some pancakes?');
 // confirm will always return a boolean value:
 //  true if the user clicks ok
 //  false if the user clicks cancel
-console.log('confirmed:', confirmed); // true or false
-console.log('typeof confirmed:', typeof confirmed); // 'boolean'
+console.log(confirmed); // true or false
+console.log(typeof confirmed); // 'boolean'
 ```
 
 </details>
@@ -817,8 +816,8 @@ let prompted = prompt('what is your favorite kind of pancake');
 //  null: if the user clicks "cancel" or presses the "esc" key
 //  string: if the user clicks "ok" or uses the "enter" key
 //  (it doesn't matter if the user inputs text or not!)
-console.log('prompted:', prompted); // the user's text or null
-console.log('typeof prompted:', typeof prompted); // 'string' or 'object'
+console.log(prompted); // the user's text or null
+console.log(typeof prompted); // 'string' or 'object'
 ```
 
 </details>
@@ -829,6 +828,8 @@ Decide which lines of code to run depending on the values in your program.
 
 You will learn to use control flow with user input to make small text-based programs in the browser.
 
+> hint: use "trace" to study these examples
+
 <details>
 <summary>🥚 if</summary>
 
@@ -836,7 +837,6 @@ You will learn to use control flow with user input to make small text-based prog
 console.log('-- if --');
 
 let input = prompt("please don't cancel");
-console.log('input:', input);
 
 if (input === null) {
   // enter this block if the condition is true
@@ -852,7 +852,6 @@ if (input === null) {
 console.log('--  if else  --');
 
 let input = prompt("please don't cancel");
-console.log('input:', input);
 
 if (input === null) {
   // enter this block if the condition is true
@@ -871,7 +870,6 @@ if (input === null) {
 console.log('-- if else if else --');
 
 let input = prompt('enter something');
-console.log('input:', input);
 
 if (input === null) {
   // enter this block if the first condition is true
@@ -905,7 +903,6 @@ let input = '';
 //  keep looping if they type nothing (input === '')
 while (input === null || input === '') {
   input = prompt('enter something');
-  console.log('input:', input);
 }
 
 alert(input + '!');
@@ -924,7 +921,6 @@ let input = '';
 
 while (input === null || input === '') {
   input = prompt('enter something');
-  console.log('input:', input);
 }
 
 /* -- alert each character of the input --*/
@@ -935,7 +931,7 @@ while (input === null || input === '') {
 //  then the second,
 //  then the third, ...
 for (let character of input) {
-  console.log('character:', character);
+  alert(character);
 }
 ```
 
@@ -952,27 +948,19 @@ let input = '';
 
 while (input === null || input === '') {
   input = prompt('enter something with no duplicate characters');
-  console.log('input:', input);
 }
 
 /* -- search for duplicate characters --*/
 
 let visited = '';
-console.log('visited:', visited);
 
 for (let character of input) {
-  console.log('character:', character);
-
   let isDuplicate = visited.includes(character);
-  console.log('isDuplicate:', isDuplicate);
-
   if (isDuplicate) {
     // this will leave the loop immediately
     break;
   }
-
   visited = visited + character;
-  console.log('visited:', visited);
 }
 
 /* -- display the outcome to your user --*/
@@ -997,7 +985,6 @@ let input = '';
 
 while (input === null || input === '') {
   input = prompt('enter something, all the vowels will be removed');
-  console.log('input:', input);
 }
 
 /* -- create a copy of the input with all the vowels removed --*/
@@ -1005,27 +992,19 @@ while (input === null || input === '') {
 let vowels = 'aeiouAEIOU';
 
 let withoutVowels = '';
-console.log('withoutVowels:', withoutVowels);
 
 for (let character of input) {
-  console.log('character:', character);
-
   let isVowel = vowels.includes(character);
-  console.log('isVowel:', isVowel);
-
   if (isVowel) {
+    // this will skip to the next character
     continue;
   }
-
   withoutVowels = withoutVowels + character;
-  console.log('withoutVowels:', withoutVowels);
 }
 
 /* -- display the outcome to your user --*/
 
-let finalMessage =
-  'before: "' + input + '"\n' + 'after: "' + withoutVowels + '"';
-alert(finalMessage);
+alert('before: "' + input + '"\n' + 'after: "' + withoutVowels + '"');
 ```
 
 </details>
@@ -1039,7 +1018,6 @@ let input = '';
 
 while (input === null || input === '') {
   input = prompt('please enter something');
-  console.log('input:', input);
 }
 
 alert('here are the character in: "' + input + '":');
@@ -1048,12 +1026,9 @@ alert('here are the character in: "' + input + '":');
 //  it steps from 0 to a maximum value
 let index = 0;
 while (index < input.length) {
-  console.log('index:', index);
-
   let character = input[index];
-  console.log('character:', character);
-
-  input = input + 1;
+  alert(character);
+  index = index + 1;
 }
 ```
 
@@ -1067,17 +1042,14 @@ console.log('-- for --');
 let input = '';
 while (input === null || input === '') {
   input = prompt('please enter something');
-  console.log('input:', input);
 }
 
 alert('here are the character in: "' + input + '":');
 
 // for loops do the same thing as a while loop with a stepper
-for (let index = 0; index < input.length; input = input + 1) {
-  console.log('index:', index);
-
+for (let index = 0; index < input.length; index = index + 1) {
   let character = input[index];
-  console.log('character:', character);
+  alert(character);
 }
 ```
 
@@ -1264,30 +1236,15 @@ console.log(Number.isNaN('asdf')); // false
 <summary>🐥 user input: numbers</summary>
 
 ```js
-console.log('-- boolean flags --');
+console.log('-- numbers: user input --');
 
-let userNumber = '';
+let input = '';
 
-let isNotANumber = true;
-while (isNotANumber) {
-  let input = prompt('please enter something');
-  console.log('input:', input);
-  userNumber = Number(input);
-  console.log('userNumber:', userNumber);
-
-  if (input === null) {
-    alert('you are a canceler');
-  } else if (input === '') {
-    alert('come on, type something');
-  } else if (Number.isNaN(userNumber)) {
-    alert('"' + input + '" is not a number');
-  } else {
-    isNotANumber = false;
-  }
-  console.log('isNotANumber:', isNotANumber);
+while (input === null || input === '' || Number.isNaN(input)) {
+  input = prompt('please enter something');
 }
 
-alert('your number: ' + userNumber);
+alert('your number: ' + input);
 ```
 
 </details>
@@ -1376,8 +1333,8 @@ The exercises in this module focus on how to read and understand programs that i
 
 - 🥚 **[reading-code](./reading-code)**:
 - 🐣 **[forest-and-trees](./forest-and-trees)**
-- 🐣 **[naming-variables](./naming-variables)**
 - 🐣 **[parsons-problems](./parsons-problems)**
+- 🐣 **[naming-variables](./naming-variables)**
 
 </details>
 <br>
@@ -1399,7 +1356,7 @@ The exercises in this module focus on how to read and understand programs that i
   - user input
   - conditionals
 
-<details open>
+<details>
 <summary>expand/collapse</summary>
 <br>
 

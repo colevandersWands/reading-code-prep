@@ -7,12 +7,17 @@
   "study": {
     "run": true,
     "flowchart": true,
-    "save": true
+    "save": true,
+    "trace": true
   },
   "parsons": {
-    "run": true
+    "run": true,
+    "trace": true,
+    "flowchart": true
   },
   "highlight": {
-    "run": true
+    "run": true,
+    "trace": true,
+    "flowchart": true
   }
 }
