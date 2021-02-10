@@ -83,7 +83,7 @@ In this module you will only learn a small part of what JavaScript has to offer.
 
 Below is all the JavaScript you will find in this module's examples and exercises. Don't be mistaken, there's a lot you can do with only this!
 
-<details>
+<details open>
 <summary>expand/collapse</summary>
 
 ### For Developers
@@ -887,10 +887,10 @@ if (input === null) {
 
 </details>
 <details>
-<summary>🥚 while loop</summary>
+<summary>🥚 while</summary>
 
 ```js
-console.log('-- while loop --');
+console.log('-- while --');
 
 // in the previous examples, we check if the input is not empty
 //  but we still keep running the program
@@ -913,56 +913,21 @@ alert(input + '!');
 
 </details>
 <details>
-<summary>🐣 boolean flags</summary>
+<summary>🐣 for-of</summary>
 
 ```js
-console.log('-- boolean flags --');
+console.log('-- for-of --');
+
+/* -- gather user input --*/
 
 let input = '';
 
-let isEmpty = true;
-while (isEmpty) {
-  input = prompt('please enter something');
+while (input === null || input === '') {
+  input = prompt('enter something');
   console.log('input:', input);
-
-  if (input === null) {
-    alert('you are a canceler');
-  } else if (input === '') {
-    alert('come on, type something');
-  } else {
-    isEmpty = false;
-  }
-  console.log('isEmpty:', isEmpty);
 }
 
-alert('"' + input + '" is something');
-```
-
-</details>
-<details>
-<summary>🐣 for-of loops</summary>
-
-```js
-console.log('-- for-of loops --');
-
-let input = '';
-
-let isEmpty = true;
-while (isEmpty) {
-  input = prompt('please enter something');
-  console.log('input:', input);
-
-  if (input === null) {
-    alert('you are a canceler');
-  } else if (input === '') {
-    alert('come on, type something');
-  } else {
-    isEmpty = false;
-  }
-  console.log('isEmpty:', isEmpty);
-}
-
-alert('here are the character in: "' + input + '":');
+/* -- alert each character of the input --*/
 
 // a for-of loop will go through each character in a string
 //  the variable declared in the loop will be assigned one character at a time
@@ -970,9 +935,97 @@ alert('here are the character in: "' + input + '":');
 //  then the second,
 //  then the third, ...
 for (let character of input) {
-  alert(character);
   console.log('character:', character);
 }
+```
+
+</details>
+<details>
+<summary>🐣 break</summary>
+
+```js
+console.log('-- break --');
+
+/* -- gather user input --*/
+
+let input = '';
+
+while (input === null || input === '') {
+  input = prompt('enter something with no duplicate characters');
+  console.log('input:', input);
+}
+
+/* -- search for duplicate characters --*/
+
+let visited = '';
+console.log('visited:', visited);
+
+for (let character of input) {
+  console.log('character:', character);
+
+  let isDuplicate = visited.includes(character);
+  console.log('isDuplicate:', isDuplicate);
+
+  if (isDuplicate) {
+    // this will leave the loop immediately
+    break;
+  }
+
+  visited = visited + character;
+  console.log('visited:', visited);
+}
+
+/* -- display the outcome to your user --*/
+
+if (visited.length === input.length) {
+  alert('well done!');
+} else {
+  alert('too bad, try again');
+}
+```
+
+</details>
+<details>
+<summary>🐣 continue</summary>
+
+```js
+console.log('-- continue --');
+
+/* -- gather user input --*/
+
+let input = '';
+
+while (input === null || input === '') {
+  input = prompt('enter something, all the vowels will be removed');
+  console.log('input:', input);
+}
+
+/* -- create a copy of the input with all the vowels removed --*/
+
+let vowels = 'aeiouAEIOU';
+
+let withoutVowels = '';
+console.log('withoutVowels:', withoutVowels);
+
+for (let character of input) {
+  console.log('character:', character);
+
+  let isVowel = vowels.includes(character);
+  console.log('isVowel:', isVowel);
+
+  if (isVowel) {
+    continue;
+  }
+
+  withoutVowels = withoutVowels + character;
+  console.log('withoutVowels:', withoutVowels);
+}
+
+/* -- display the outcome to your user --*/
+
+let finalMessage =
+  'before: "' + input + '"\n' + 'after: "' + withoutVowels + '"';
+alert(finalMessage);
 ```
 
 </details>
@@ -980,23 +1033,13 @@ for (let character of input) {
 <summary>🐥 while with stepper</summary>
 
 ```js
-console.log('-- for loops --');
+console.log('-- while with stepper --');
 
 let input = '';
 
-let isEmpty = true;
-while (isEmpty) {
+while (input === null || input === '') {
   input = prompt('please enter something');
   console.log('input:', input);
-
-  if (input === null) {
-    alert('you are a canceler');
-  } else if (input === '') {
-    alert('come on, type something');
-  } else {
-    isEmpty = false;
-  }
-  console.log('isEmpty:', isEmpty);
 }
 
 alert('here are the character in: "' + input + '":');
@@ -1008,7 +1051,6 @@ while (index < input.length) {
   console.log('index:', index);
 
   let character = input[index];
-  alert(character);
   console.log('character:', character);
 
   input = input + 1;
@@ -1017,26 +1059,15 @@ while (index < input.length) {
 
 </details>
 <details>
-<summary>🐥 for loop</summary>
+<summary>🐥 for</summary>
 
 ```js
-console.log('-- for loops --');
+console.log('-- for --');
 
 let input = '';
-
-let isEmpty = true;
-while (isEmpty) {
+while (input === null || input === '') {
   input = prompt('please enter something');
   console.log('input:', input);
-
-  if (input === null) {
-    alert('you are a canceler');
-  } else if (input === '') {
-    alert('come on, type something');
-  } else {
-    isEmpty = false;
-  }
-  console.log('isEmpty:', isEmpty);
 }
 
 alert('here are the character in: "' + input + '":');
@@ -1046,7 +1077,6 @@ for (let index = 0; index < input.length; input = input + 1) {
   console.log('index:', index);
 
   let character = input[index];
-  alert(character);
   console.log('character:', character);
 }
 ```
@@ -1369,7 +1399,7 @@ The exercises in this module focus on how to read and understand programs that i
   - user input
   - conditionals
 
-<details >
+<details open>
 <summary>expand/collapse</summary>
 <br>
 
@@ -1399,7 +1429,7 @@ The exercises in this module focus on how to read and understand programs that i
 
 - forest and trees: user input & conditionals
   - full class led by coach
-  - and/or in small groups, depending on number of coaches
+  - and/or in small groups, depending on number of
 
 ### After Class
 
