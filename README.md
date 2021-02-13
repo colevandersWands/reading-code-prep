@@ -31,15 +31,17 @@ _introduction_
 >
 > Using a browser with good DevTools will make your life easier: [Chromium](http://www.chromium.org/getting-involved/download-chromium), [FireFox](https://www.mozilla.org/en-US/firefox/new/), [Edge](https://www.microsoft.com/edge), [Chrome](https://www.google.com/chrome/)
 
-1. Install or update the `study-lenses` package globally
+1. Install OR update the `study-lenses` package globally
    - `$ npm install -g study-lenses` (if you do not have it already)
    - `$ npm update -g study-lenses` (if you already have it installed)
-2. Clone this repository:
-   - `$ git clone git@github.com:HackYourFutureBelgium/welcome-to-js.git` (SSH, recommended)
-   - `$ git clone https://github.com/HackYourFutureBelgium/welcome-to-js.git` (HTTPS)
+2. Clone this repository using ONE of the following options:
+   - `$ git clone git@github.com:HackYourFutureBelgium/welcome-to-js-prep.git (SSH, recommended)
+   OR
+   - `$ git clone https://github.com/HackYourFutureBelgium/welcome-to-js-prep.git` (HTTPS)
+   OR
    - `$ gh repo clone HackYourFutureBelgium/welcome-to-js` (GH CLI)
 3. Navigate to the module repository in terminal
-   - `$ cd welcome-to-js`
+   - `$ cd welcome-to-js-prep`
 4. Run the `study` command from your CLI
    - `$ study`
 5. The material will open in your default browser, you're good to go!
