@@ -35,9 +35,7 @@ _introduction_
    - `$ npm install -g study-lenses` (if you do not have it already)
    - `$ npm update -g study-lenses` (if you already have it installed)
 2. Clone this repository:
-   - `$ git clone git@github.com:HackYourFutureBelgium/welcome-to-js.git` (SSH, recommended)
-   - `$ git clone https://github.com/HackYourFutureBelgium/welcome-to-js.git` (HTTPS)
-   - `$ gh repo clone HackYourFutureBelgium/welcome-to-js` (GH CLI)
+   - `$ git clone git@github.com:HackYourFutureBelgium/welcome-to-js.git`
 3. Navigate to the module repository in terminal
    - `$ cd welcome-to-js`
 4. Run the `study` command from your CLI
@@ -896,12 +894,12 @@ console.log('-- while --');
 
 // explain they keep going while the thing is true
 
-let input = '';
+let input = null;
 
 // continue prompting the user until they enter something
-//  keep looping if they cancel (input === null)
-//  keep looping if they type nothing (input === '')
-while (input === null || input === '') {
+//  canceling will return null, this loop will not let you cancel
+//  entering without typing anything inputs an empty string, that is allowed
+while (input === null) {
   input = prompt('enter something');
 }
 
@@ -917,9 +915,9 @@ console.log('-- for-of --');
 
 /* -- gather user input --*/
 
-let input = '';
+let input = null;
 
-while (input === null || input === '') {
+while (input === null) {
   input = prompt('enter something');
 }
 
@@ -944,9 +942,9 @@ console.log('-- break --');
 
 /* -- gather user input --*/
 
-let input = '';
+let input = null;
 
-while (input === null || input === '') {
+while (input === null) {
   input = prompt('enter something with no duplicate characters');
 }
 
@@ -981,9 +979,9 @@ console.log('-- continue --');
 
 /* -- gather user input --*/
 
-let input = '';
+let input = null;
 
-while (input === null || input === '') {
+while (input === null) {
   input = prompt('enter something, all the vowels will be removed');
 }
 
@@ -1014,9 +1012,9 @@ alert('before: "' + input + '"\n' + 'after: "' + withoutVowels + '"');
 ```js
 console.log('-- while with stepper --');
 
-let input = '';
+let input = null;
 
-while (input === null || input === '') {
+while (input === null) {
   input = prompt('please enter something');
 }
 
@@ -1034,13 +1032,42 @@ while (index < input.length) {
 
 </details>
 <details>
-<summary>🐥 for</summary>
+<summary>🐥 for (three lines)</summary>
 
 ```js
-console.log('-- for --');
+console.log('-- for (three lines) --');
 
-let input = '';
-while (input === null || input === '') {
+let input = null;
+
+while (input === null) {
+  input = prompt('please enter something');
+}
+
+alert('here are the character in: "' + input + '":');
+
+// for loops do the same thing as a while loop with a stepper
+// (the prettier-ignore allows this loop head to stay on 3 lines)
+// prettier-ignore
+for (
+  let index = 0;
+  index < input.length;
+  index = index + 1
+) {
+  let character = input[index];
+  alert(character);
+}
+```
+
+</details>
+<details>
+<summary>🐥 for (one line)</summary>
+
+```js
+console.log('-- for (one line) --');
+
+let input = null;
+
+while (input === null) {
   input = prompt('please enter something');
 }
 
@@ -1125,10 +1152,10 @@ console.log(0 !== null); // true
 
 </details>
 <details>
-<summary>🐣  bigger or smaller</summary>
+<summary>🐣  relational operators</summary>
 
 ```js
-console.log('-- inequality --');
+console.log('-- relational operators --');
 
 // is the left number bigger than the right one?
 console.log(3 > 22); // false
@@ -1233,18 +1260,79 @@ console.log(Number.isNaN('asdf')); // false
 
 </details>
 <details>
-<summary>🐥 user input: numbers</summary>
+<summary>🐥 numbers: user input (boolean flag)</summary>
 
 ```js
 console.log('-- numbers: user input --');
 
-let input = '';
+// why is userNumber initialized to NaN?
+let userNumber = NaN;
+while (Number.isNaN(userNumber)) {
+  let input = prompt('please enter something');
 
-while (input === null || input === '' || Number.isNaN(input)) {
-  input = prompt('please enter something');
+  if (input === null) {
+    // start over if the user entered null
+    //  null will cast to 0, not the same as inputting 0
+    alert('you are a canceler');
+  } else if (input === '') {
+    // start over if the user didn't type anything
+    //  '' will cast to 0, not the same as inputting 0
+    alert('type something');
+  } else {
+    // cast the not-empty input to type number
+    userNumber = Number(input);
+
+    // start over if the input is NaN
+    if (Number.isNaN(userNumber)) {
+      alert('"' + input + '" is not a number');
+      continue;
+    }
+  }
 }
 
-alert('your number: ' + input);
+alert(typeof userNumber + ': ' + userNumber);
+```
+
+</details>
+<details>
+<summary>🐥 numbers: user input (break/continue)</summary>
+
+```js
+console.log('-- numbers: user input --');
+
+// why is userNumber initialized to NaN?
+let userNumber;
+
+while (true) {
+  let input = prompt('please enter something');
+
+  // start over if the user entered null
+  //  null will cast to 0, not the same as inputting 0
+  if (input === null) {
+    alert('you are a canceler');
+    continue;
+  }
+  // start over if the user didn't type anything
+  //  '' will cast to 0, not the same as inputting 0
+  if (input === '') {
+    alert('type something');
+    continue;
+  }
+
+  // cast the not-empty input to type number
+  userNumber = Number(input);
+
+  // start over if the input is NaN
+  if (Number.isNaN(userNumber)) {
+    alert('"' + input + '" is not a number');
+    continue;
+  }
+
+  // success! if you've made it this far, the user inputed a number
+  break;
+}
+
+alert(typeof userNumber + ': ' + userNumber);
 ```
 
 </details>
