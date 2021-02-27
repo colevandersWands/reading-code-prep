@@ -1,22 +1,34 @@
-<!--
-plann
-- introduce a "standard" way to comment a file
-- work this into 'studying-javascript'
-  then it can then have /exercises
-
-behavior (forest): block comment up top
-  from the user's perspective, what does the program do
-  do not mention any lines of code or javascript syntax
-implementation (trees): what part of what/why comments
-  what code is in this line
-strategy (forest & trees): why part of what/why comments
-  how does this line contribute to the program's behavior
-  how does this line relate to other lines?
--->
-
 # Forest and Trees
 
-When studying code to understand a new program, thinking of forests and trees might help.
+> Code Comments: “What questions would be asked by someone looking at this code for the first time?”
+>
+> - [Scottford](https://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/)
+
+When studying code to understand a new program, thinking of forests and trees might help. This set of examples and exercises will help you learn a structured approach to studying and commenting working code.
+
+```js
+/*
+  describe what the program does from the user's perspective
+*/
+
+/* -- chunk (an important step in the program) -- */
+
+// what code is written in line of the program?
+//  why is this line of code here?
+//  what variables does it use?
+//  how does it relate to other lines?
+//  ... anything else you notice?
+let line = 'of code';
+
+/* -- chunk (an important step in the program) -- */
+
+// what code is written in line of the program?
+//  why is this line of code here?
+//  what variables does it use?
+//  how does it relate to other lines?
+//  ... anything else you notice?
+alert(line);
+```
 
 1. [Forest](#forest)
 2. [Trees](#trees)
@@ -70,7 +82,7 @@ Understanding what each line of code does and how it works, without taking a ste
 
 > if a line is important you can use `!`
 >
-> if a line confuses you you can use `?`
+> if a line is challenging you you can use `?`
 
 ```js
 /*
@@ -82,23 +94,24 @@ Understanding what each line of code does and how it works, without taking a ste
   otherwise they are not :(
 */
 
-/* prompt the user for input and assign it to `userInput`
-
-*/
+// ! prompt the user for input and assign it to `userInput`
 let userInput = prompt('enter the word "yes", upper or lower case');
 
-/* ! convert the `userInput` to lower case and compare it to the string "yes"
+// convert the `userInput` to lower case and compare it to the string "yes"
 
-*/
-if (userInput.toLowerCase() === 'yes') {
-  /* alert the user input concatenated with an exclamation mark
-
-  */
+// !compare the input to null
+if (userInput === null) {
+  // alert a sad face
+  alert(':(');
+}
+// ? convert the input to lower case and compare it to 'yes'
+else if (userInput.toLowerCase() === 'yes') {
+  // alert the user input concatenated with an exclamation mark
   alert(userInput + '!');
-} else {
-  /* alert the user input concatenated with an exclamation mark
-
-  */
+}
+// the input is not null, and is not 'yes'
+else {
+  // alert the user input concatenated with an exclamation mark
   alert('baaaaad: ' + userInput);
 }
 ```
@@ -131,27 +144,33 @@ Put together what you learned about the forest and the trees.
   otherwise they are not :(
 */
 
-/* prompt the user for input and assign it to `userInput`
-  this line explains to the user what they need to input
-  the `userInput` variable is used later on to check if the user input a valid string
-*/
+// ! prompt the user for input and assign it to `userInput`
+//   this line explains to the user what they need to input
+//   the `userInput` variable is used later on to check if the user input a valid string
 let userInput = prompt('enter the word "yes", upper or lower case');
 
-/* ! convert the `userInput` to lower case and compare it to the string "yes"
-  checking the user input to make sure they put in a valid string
-  this line uses .toLowerCase so that it doesn't matter what letter were upper or lower case
-*/
-if (userInput.toLowerCase() === 'yes') {
-  /* alert the user input concatenated with an exclamation mark
-    this is the path for valid user inputs
-    the user will be congratulated for following instructions
-  */
+// compare the input to null
+//  this is to check if they canceled the input
+if (userInput === null) {
+  // alert a sad face
+  //  let the user know how much they have disappointed you
+  alert(':(');
+}
+// ? convert the input to lower case and compare it to 'yes'
+//   checking the user input to make sure they put in a valid string
+//   this line uses .toLowerCase so that it doesn't matter what letter were upper or lower case
+else if (userInput.toLowerCase() === 'yes') {
+  // alert the user input concatenated with an exclamation mark
+  //   this is the path for valid user inputs
+  //   the user will be congratulated for following instructions
   alert(userInput + '!');
-} else {
-  /* alert the user input concatenated with an exclamation mark
-    this is the path for invalid user inputs (things that aren't some form of "yes")
-    it will tell users that they messed up baaaaadly
-  */
+}
+// the input is not null, and is not 'yes'
+//  they did input something, but it was not correct
+else {
+  // alert the user input concatenated with an exclamation mark
+  //   this is the path for invalid user inputs (things that aren't some form of "yes")
+  //   it will tell users that they messed up baaaaadly
   alert('baaaaad: ' + userInput);
 }
 ```
@@ -180,29 +199,42 @@ You can label these with commented line dividers and a short title.
 
 /* --- gather user input --- */
 
-/* prompt the user for input and assign it to `userInput`
-  this line explains to the user what they need to input
-  the `userInput` variable is used later on to check if the user input a valid string
-*/
+// ! prompt the user for input and assign it to `userInput`
+//   this line explains to the user what they need to input
+//   the `userInput` variable is used later on to check if the user input a valid string
 let userInput = prompt('enter the word "yes", upper or lower case');
 
 /* --- communicate the results --- */
 
-/* ! convert the `userInput` to lower case and compare it to the string "yes"
-  checking the user input to make sure they put in a valid string
-  this line uses .toLowerCase so that it doesn't matter what letter were upper or lower case
-*/
-if (userInput.toLowerCase() === 'yes') {
-  /* alert the user input concatenated with an exclamation mark
-    this is the path for valid user inputs
-    the user will be congratulated for following instructions
-  */
+// compare the input to null
+//  this is to check if they canceled the input
+if (userInput === null) {
+  // alert a sad face
+  //  let the user know how much they have disappointed you
+  alert(':(');
+}
+// ? convert the input to lower case and compare it to 'yes'
+//   checking the user input to make sure they put in a valid string
+//   this line uses .toLowerCase so that it doesn't matter what letter were upper or lower case
+else if (userInput.toLowerCase() === 'yes') {
+  // alert the user input concatenated with an exclamation mark
+  //   this is the path for valid user inputs
+  //   the user will be congratulated for following instructions
   alert(userInput + '!');
-} else {
-  /* alert the user input concatenated with an exclamation mark
-    this is the path for invalid user inputs (things that aren't some form of "yes")
-    it will tell users that they messed up baaaaadly
-  */
+}
+// the input is not null, and is not 'yes'
+//  they did input something, but it was not correct
+else {
+  // alert the user input concatenated with an exclamation mark
+  //   this is the path for invalid user inputs (things that aren't some form of "yes")
+  //   it will tell users that they messed up baaaaadly
   alert('baaaaad: ' + userInput);
 }
 ```
+
+---
+
+## Resources
+
+- [better-programming](https://medium.com/better-programming/javascript-clean-code-comments-c926d5aae2cb)
+- [elegantthemes](https://www.elegantthemes.com/blog/wordpress/how-to-comment-your-code-like-a-pro-best-practices-and-good-habits)

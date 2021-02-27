@@ -38,3 +38,7 @@ The files of code in this folder are a couple steps more advanced than what you 
 - frowney
 - exclamation
 - question
+
+---
+
+## Roles of Variables

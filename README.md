@@ -34,17 +34,8 @@ _introduction_
 1. Install OR update the `study-lenses` package globally
    - `$ npm install -g study-lenses` (if you do not have it already)
    - `$ npm update -g study-lenses` (if you already have it installed)
-<<<<<<< HEAD
 2. Clone this repository:
    - `$ git clone git@github.com:HackYourFutureBelgium/welcome-to-js.git`
-=======
-2. Clone this repository using ONE of the following options:
-   - `$ git clone git@github.com:HackYourFutureBelgium/welcome-to-js-prep.git (SSH, recommended)
-   OR
-   - `$ git clone https://github.com/HackYourFutureBelgium/welcome-to-js-prep.git` (HTTPS)
-   OR
-   - `$ gh repo clone HackYourFutureBelgium/welcome-to-js` (GH CLI)
->>>>>>> f5a2bd12e6b91f78c5e663708ab63588b94ce1b9
 3. Navigate to the module repository in terminal
    - `$ cd welcome-to-js-prep`
 4. Run the `study` command from your CLI
@@ -329,6 +320,17 @@ console.log('a' + 'bc1' + '23'); // 'abc123'
 
 </details>
 <details>
+<summary>🥚 newline character</summary>
+
+```js
+console.log('-- strings: newline character --');
+
+// to have your string print on more than one line:
+console.log('first line\nsecond line\nthird line');
+```
+
+</details>
+<details>
 <summary>🥚 .replaceAll</summary>
 
 ```js
@@ -386,7 +388,7 @@ console.log('Abc'.includes('BC')); // false
 
 </details>
 <details>
-<summary>🐣 .length</summary>
+<summary>🥚 .length</summary>
 
 ```js
 console.log('-- .length --');
@@ -400,7 +402,7 @@ console.log('abc'.length); // 3
 
 </details>
 <details>
-<summary>🐣 character indexes</summary>
+<summary>🥚 character indexes</summary>
 
 ```js
 console.log('-- character indexes --');
@@ -917,7 +919,7 @@ alert(input + '!');
 
 </details>
 <details>
-<summary>🐣 for-of</summary>
+<summary>🥚 for-of</summary>
 
 ```js
 console.log('-- for-of --');
@@ -1041,38 +1043,10 @@ while (index < input.length) {
 
 </details>
 <details>
-<summary>🐥 for (three lines)</summary>
+<summary>🐥 for loop</summary>
 
 ```js
-console.log('-- for (three lines) --');
-
-let input = null;
-
-while (input === null) {
-  input = prompt('please enter something');
-}
-
-alert('here are the character in: "' + input + '":');
-
-// for loops do the same thing as a while loop with a stepper
-// (the prettier-ignore allows this loop head to stay on 3 lines)
-// prettier-ignore
-for (
-  let index = 0;
-  index < input.length;
-  index = index + 1
-) {
-  let character = input[index];
-  alert(character);
-}
-```
-
-</details>
-<details>
-<summary>🐥 for (one line)</summary>
-
-```js
-console.log('-- for (one line) --');
+console.log('-- for loop --');
 
 let input = null;
 
@@ -1346,7 +1320,66 @@ alert(typeof userNumber + ': ' + userNumber);
 
 </details>
 
-### Regular Expressions
+### Math
+
+The `Math` object in JavaScript has some useful methods you will see in the Welcome to JS examples and exercises. You don't need to master these, but should know what they are doing when you come across them in the code.
+
+<details>
+<summary>🐣 .random</summary>
+
+```js
+console.log('-- Math.random --');
+
+// generates a random decimal number between 0 and 1
+console.log(Math.random()); // ?
+console.log(Math.random()); // ?
+console.log(Math.random()); // ?
+console.log(Math.random()); // ?
+console.log(Math.random()); // ?
+```
+
+</details>
+<details>
+<summary>🐣  .round</summary>
+
+```js
+console.log('-- Math.round --');
+
+// rounds a decimal number to the nearest integer
+console.log(Math.round(0.2)); // 0
+console.log(Math.round(0.5)); // 1
+console.log(Math.round(0.8)); // 1
+console.log(Math.round(1.2)); // 2
+console.log(Math.round(1.5)); // 3
+console.log(Math.round(1.8)); // 3
+```
+
+</details>
+<details>
+<summary>🐥  all together</summary>
+
+```js
+console.log('-- Math.random & Math.round --');
+
+// this is useful for creating random numbers in your programs
+//  the example below shows how to create a random number between 0 and 5
+let randomDecimal = Math.random();
+let decimalTimesFive = randomDecimal * 5;
+let randomNumber = Math.round(decimalTimesFive);
+console.log(randomNumber); // ?
+
+// or in one line, from 0 -> 5
+let randomNumberFromZeroToFive = Math.round(Math.random() * 5);
+console.log(randomNumberFromZeroToFive); // ?
+
+// from 1 -> 5
+let randomNumberFromOneToFive = Math.round(Math.random() * 4) + 1;
+console.log(randomNumberFromOneToFive); // ?
+```
+
+</details>
+
+<!-- ### Regular Expressions
 
 <details>
 <summary>🐥 </summary>
@@ -1359,7 +1392,7 @@ alert(typeof userNumber + ': ' + userNumber);
 <details>
 <summary>🐥 </summary>
 
-</details>
+</details> -->
 
 </details>
 
@@ -1393,6 +1426,28 @@ These two games are deceptively simple. You will be given pseudo-code and will n
 - 🥚 [compute-it](http://compute-it.toxicode.fr/)
 - 🐥 [little-dot](http://little-dot.toxicode.fr/)
 
+<!-- ### What is Programming? -->
+
+### What is JavaScript?
+
+- [Andrew Mosh](https://www.youtube.com/watch?v=upDLs1sn7g4)
+- [Code School](https://www.youtube.com/watch?v=nItSSTwBvSU)
+- [MDN: First Steps](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- [javascript.info](https://javascript.info/intro)
+- [Danielle Thé](https://www.youtube.com/watch?v=gT0Lh1eYk78)
+
+### Reading Code
+
+- ([how do computers read code?](https://www.youtube.com/watch?v=QXjU9qTsYCc))
+- [Reading code is harder than writing it](https://trishagee.github.io/presentation/reading_code/)
+- [Learn to read the Source, Luke](https://blog.codinghorror.com/learn-to-read-the-source-luke/)
+- [How to read code?](https://itnext.io/how-to-read-code-bf478c262932)
+- [5 tips](https://medium.com/@smilin.robin/5-tips-on-how-to-read-someone-elses-code-b931b6a059ec)
+- [How to read other people's code](https://selftaughtcoders.com/how-to-quickly-and-effectively-read-other-peoples-code/)
+- [ASCII Pronunciation Rules for Programmers](https://blog.codinghorror.com/ascii-pronunciation-rules-for-programmers/)
+- [JavaScript Glossary](https://www.codecademy.com/articles/glossary-javascript)
+- [How to teach programming (and other things)?](https://www.youtube.com/watch?v=g1ib43q3uXQ&feature=youtu.be&t=1209)
+
 ### Tutorials
 
 A selection of tutorial sites with interactive exercises, these tutorial will help you learn the JS Syntax you need to study the exercises in this repository. These tutorials will each cover different topics in different orders and in different ways. When you're trying to figure out what to focus on, remember: [Just Enough JavaScript](#just-enough-javascript)
@@ -1403,17 +1458,11 @@ Take a look through these to find the one that helps you the most.
 - [programiz](https://www.programiz.com/javascript/get-started): through while loops
 - [sololearn](https://www.sololearn.com/learning/1024): through Conditionals and Loops
 - [launchcode](https://education.launchcode.org/intro-to-professional-web-dev/index.html): chapters 1 -> 5
+- [javascript.express](https://www.javascript.express/): the chapters that cover Just Enough JavaScript
 - [freecodecamp](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/): through for loops. (more advanced)
 - [Headfirst JavaScript](https://www.oreilly.com/library/view/head-first-javascript/9781449340124/ch01.html): an outstanding (paid) book for understanding JS and the web. comes with code samples you can run locally
 
 Is there another tutorial you like better than these? not a problem! Just us a PR so other students can find it ;)
-
-### Flashcards
-
-There's a good reason these have been around forever, they work. Quiz yourself on the most fundamental concepts in this module the good old-fashioned way: with flashcards.
-
-- 🥚 **[Printables](./flashcards/printables)**: PDFs to print and study offline
-- 🥚 **[Interactive](./flashcards/interactive)**: to study live in your browser
 
 ### References
 
@@ -1423,6 +1472,13 @@ Resources you can use to look up specific concepts when you are stuck or curious
 - [javascript.info](https://javascript.info): for short and clear explanations of everything you will need in JS
 - [hackyourfuture.github.io/study](https://hackyourfuture.github.io/study): a collection of explanations and resources put together by the HYF community. PR's are welcome!
 - [codeacademy cheat-sheets](https://www.codecademy.com/learn/introduction-to-javascript/modules/learn-javascript-introduction/cheatsheet)
+
+<!-- ### Flashcards
+
+There's a good reason these have been around forever, they work. Quiz yourself on the most fundamental concepts in this module the good old-fashioned way: with flashcards.
+
+- 🥚 **[Printables](./flashcards/printables)**: PDFs to print and study offline
+- 🥚 **[Interactive](./flashcards/interactive)**: to study live in your browser -->
 
 ### Exercises in this Repo
 
@@ -1559,3 +1615,7 @@ Screen recordings of class. Coaches, when sending your PR's with links please ..
 ---
 
 ### class-13-14
+
+```
+
+```

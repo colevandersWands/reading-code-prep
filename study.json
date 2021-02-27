@@ -8,7 +8,9 @@
     "run": true,
     "flowchart": true,
     "save": true,
-    "trace": true
+    "trace": true,
+    "strict": true,
+    "scopeAnalysis": true
   },
   "parsons": {
     "run": true,

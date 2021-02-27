@@ -1,20 +1,52 @@
-> deprecated in favor of implicit explore
+# Logging
 
 some helpful tips and strategies for putting console.logs in existing code.
 
-- examples: simple prompt/alert programs with logs
-- exercises: practice logging working programs without logs
+---
+
+## Variables
+
+each time a variable is assigned a value
+
+```js
+let x = 'a';
+console.log('x:', x);
+x = 'b';
+console.log('x:', x);
+```
 
 ---
 
-- this is for the next module
+## Conditionals
 
-one tip: log the type & value
+refactoring logic to variables, log the variables
 
-```js
-const x = 'e';
-console.log(typeof x + ':', x);
-// and maybe even the variable name as well
-//  then your logs clearly trace a variable's history
-console.log('x:', typeof x + ',', x);
-```
+---
+
+## While
+
+before: the condition in plain english
+
+top: important variables, possibly a variable from the condition
+
+bottom: the important variable at the end of each iteration
+
+---
+
+## For Of
+
+before: for of thingToIterate
+
+top: the character, important variable
+
+bottom: the important variable at the end of each iteration
+
+---
+
+## For
+
+before: starting condition, step condition, end condition. in plain english
+
+top: i, important variable
+
+bottom: the important variable at the end of each iteration
