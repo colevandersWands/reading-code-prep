@@ -22,7 +22,7 @@ Learning to read code is learning to ask the right questions then finding your a
 The code in this folder is a collection of fully working programs that use Just Enough JavaScript. Each file has block comments (`/* -- ... -- */`) to help you find your way through the important steps of the program. Below are some tips to help you get started reading the programs:
 
 - [Zooming in, Zooming out](#zooming-in-zooming-out) is about asking the right questions
-- [Highlighting Things](#highlighting-things) is about finding the answers
+- [Drawing on Code](#drawing-on-code) is about finding the answers
 
 ---
 
