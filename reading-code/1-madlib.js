@@ -1,3 +1,5 @@
+/* -- declare program variables -- */
+
 let madlib = '';
 
 let noun = null;
@@ -7,7 +9,7 @@ let verb = null;
 /* -- fill in the adjective -- */
 
 while (adjective === null) {
-  adjective = prompt('enter a verb');
+  adjective = prompt('enter an adjective');
 }
 
 madlib = 'the ' + adjective;

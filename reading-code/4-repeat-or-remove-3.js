@@ -22,15 +22,15 @@ if (keepLetters) {
   for (let i = 0; i < phrase.length; i = i + 1) {
     let smallLetter = phrase[i].toLowerCase();
     if (smallLetters.includes(smallLetter)) {
-      newPhrase = phrase + character;
+      newPhrase = phrase + smallLetter;
     }
   }
 } else if (!keepLetters) {
   /* -- repeat each character -- */
 
   for (let index = 0; index < phrase.length; index = index + 1) {
-    let character = phrase[index];
-    newPhrase = newPrase + character + character;
+    let smallLetter = phrase[index];
+    newPhrase = newPhrase + smallLetter + smallLetter;
   }
 }
 

@@ -10,7 +10,8 @@
     "save": true,
     "trace": true,
     "strict": true,
-    "scopeAnalysis": true
+    "variables": true,
+    "highlight": true
   },
   "parsons": {
     "run": true,
@@ -19,7 +20,19 @@
   },
   "highlight": {
     "run": true,
-    "trace": true,
-    "flowchart": true
+    "trace": {
+      "controlFlow": false,
+      "operators": false,
+      "functions": false
+    },
+    "flowchart": true,
+    "variables": true
+  },
+  "variables": {
+    "trace": {
+      "controlFlow": false,
+      "operators": false,
+      "functions": false
+    }
   }
 }

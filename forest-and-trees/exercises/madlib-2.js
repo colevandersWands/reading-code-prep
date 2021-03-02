@@ -1,6 +1,6 @@
 let adjective = null;
 while (adjective === null) {
-  adjective = prompt('enter a verb');
+  adjective = prompt('enter an adjective');
 }
 
 let noun = null;

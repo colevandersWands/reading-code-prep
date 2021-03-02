@@ -1447,6 +1447,9 @@ These two games are deceptively simple. You will be given pseudo-code and will n
 - [ASCII Pronunciation Rules for Programmers](https://blog.codinghorror.com/ascii-pronunciation-rules-for-programmers/)
 - [JavaScript Glossary](https://www.codecademy.com/articles/glossary-javascript)
 - [How to teach programming (and other things)?](https://www.youtube.com/watch?v=g1ib43q3uXQ&feature=youtu.be&t=1209)
+- Code Reading Clubs - [code-reading.org](https://code-reading.org/)
+  - [Resources](https://github.com/CodeReadingClubs/Resources)
+  - [pdf-maker](https://github.com/CodeReadingClubs/pdf-maker) - convert code from GitHub into a PDF for reading
 
 ### Tutorials
 

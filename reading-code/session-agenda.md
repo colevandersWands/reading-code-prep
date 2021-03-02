@@ -1,3 +1,5 @@
+> copied from [CodeReadingClub/Resources](https://github.com/CodeReadingClubs/Resources/blob/trunk/exercises.md), follow this link for their most up-to-date agenda
+
 # Exercises
 
 This page contains a set of exercises which can be used in Code Reading Clubs. Of course, your club does not need to use all exercises, they are meant as a starting point. If you are trying out variants, do let us know!
