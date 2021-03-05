@@ -1,20 +1,3 @@
-<details>
-<summary>guide: reading code</summary>
-  <video  src="./guide.mp4"
-          controls
-          style="height: 70%; width: 70%"
-  ></video>
-</details>
-<details>
-<summary>printing and saving</summary>
-  <video  src="./printing-and-saving.mp4"
-          controls
-          style="height: 70%; width: 70%"
-  ></video>
-</details>
-
----
-
 # Reading Code
 
 Learning to read code is learning to ask the right questions then finding your answers in the code. In this folder you will practice asking important questions about a new program, then exploring the code to find your answers. Depending on what you want to learn from the code you will need to ask and answer different questions.

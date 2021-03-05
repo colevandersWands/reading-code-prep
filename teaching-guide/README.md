@@ -48,9 +48,9 @@ In the previous module ([ux-ui-design](https://github.com/HackYourFutureBelgium/
 
 ## After this Module
 
-In the next module ([welcome-to-js](https://github.com/HackYourFutureBelgium/debugging), 4 weeks) students will cover the same language features as this module in more depth. [JS Tutor](http://www.pythontutor.com/live.html#mode=edit) and the Browser's DevTools will be introduced as ways to understand program memory and step-by-step execution.
+In the next module ([debugging](https://github.com/HackYourFutureBelgium/debugging), 4 weeks) students will learn to visualize, step through and predict program execution. [JS Tutor](http://www.pythontutor.com/live.html#mode=edit) and the Browser's DevTools will be introduced as ways to understand program memory.
 
-The module will also go further into type coercion, and will reach arrays, object and functions.
+The module will also go further into type coercion, and will reach arrays, object and functions. (but not object methods)
 
 [TOP](#teaching-guide)
 

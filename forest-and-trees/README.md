@@ -60,11 +60,16 @@ Understanding what the entire program does, without looking at any single line o
 
 let userInput = prompt('enter the word "yes", upper or lower case');
 
-if (userInput.toLowerCase() === 'yes') {
-  alert(userInput + '!');
+let reaction = '';
+if (userInput === null) {
+  reaction = ':(';
+} else if (userInput.toLowerCase() === 'yes') {
+  reaction = userInput + '!';
 } else {
-  alert('baaaaad: ' + userInput);
+  reaction = 'baaaaad: ' + userInput;
 }
+
+alert(reaction);
 ```
 
 [TOP](#forest-and-trees)
@@ -94,26 +99,30 @@ Understanding what each line of code does and how it works, without taking a ste
   otherwise they are not :(
 */
 
-// ! prompt the user for input and assign it to `userInput`
+// call prompt: instructions for the program
+// declare, init: the value returned from calling `prompt` (string or null)
 let userInput = prompt('enter the word "yes", upper or lower case');
 
-// convert the `userInput` to lower case and compare it to the string "yes"
-
-// !compare the input to null
+// declare, init: an empty string
+let reaction = '';
+// test: compare the input to null
 if (userInput === null) {
-  // alert a sad face
-  alert(':(');
+  // write: a sad face
+  reaction = ':(';
 }
-// ? convert the input to lower case and compare it to 'yes'
+// test: convert the input to lower case and compare it to 'yes'
 else if (userInput.toLowerCase() === 'yes') {
-  // alert the user input concatenated with an exclamation mark
-  alert(userInput + '!');
+  // write: the input concatenated with an exclamation mark
+  reaction = userInput + '!';
 }
 // the input is not null, and is not 'yes'
 else {
-  // alert the user input concatenated with an exclamation mark
-  alert('baaaaad: ' + userInput);
+  // write: baaaad concatenated with the input
+  reaction = 'baaaaad: ' + userInput;
 }
+
+// call alert: the correct reaction
+alert(reaction);
 ```
 
 [TOP](#forest-and-trees)
@@ -144,35 +153,44 @@ Put together what you learned about the forest and the trees.
   otherwise they are not :(
 */
 
-// ! prompt the user for input and assign it to `userInput`
+// call prompt: instructions for the program
+// declare, init: the value returned from calling `prompt` (string or null)
 //   this line explains to the user what they need to input
 //   the `userInput` variable is used later on to check if the user input a valid string
 let userInput = prompt('enter the word "yes", upper or lower case');
 
-// compare the input to null
-//  this is to check if they canceled the input
+// declare, init: an empty string
+//  this variable will be assigned a different values depending on what the user provided
+//  the value in `reaction` will be used at the end of the program to alert the user
+let reaction = '';
+// test: compare the input to null
+//  this is to check if they canceled the prompt
 if (userInput === null) {
-  // alert a sad face
+  // write: a sad face
   //  let the user know how much they have disappointed you
-  alert(':(');
+  reaction = ':(';
 }
-// ? convert the input to lower case and compare it to 'yes'
+// test: convert the input to lower case and compare it to 'yes'
 //   checking the user input to make sure they put in a valid string
 //   this line uses .toLowerCase so that it doesn't matter what letter were upper or lower case
 else if (userInput.toLowerCase() === 'yes') {
-  // alert the user input concatenated with an exclamation mark
+  // write: the input concatenated with an exclamation mark
   //   this is the path for valid user inputs
   //   the user will be congratulated for following instructions
-  alert(userInput + '!');
+  reaction = userInput + '!';
 }
 // the input is not null, and is not 'yes'
 //  they did input something, but it was not correct
 else {
-  // alert the user input concatenated with an exclamation mark
+  // write: baaaad concatenated with the input
   //   this is the path for invalid user inputs (things that aren't some form of "yes")
   //   it will tell users that they messed up baaaaadly
-  alert('baaaaad: ' + userInput);
+  reaction = 'baaaaad: ' + userInput;
 }
+
+// call alert: the correct reaction
+//  all the logic is done, nothing left but to send your reaction to the user
+alert(reaction);
 ```
 
 [TOP](#forest-and-trees)
@@ -199,42 +217,56 @@ You can label these with commented line dividers and a short title.
 
 /* --- gather user input --- */
 
-// ! prompt the user for input and assign it to `userInput`
+// call prompt: instructions for the program
+// declare, init: the value returned from calling `prompt` (string or null)
 //   this line explains to the user what they need to input
 //   the `userInput` variable is used later on to check if the user input a valid string
 let userInput = prompt('enter the word "yes", upper or lower case');
 
-/* --- communicate the results --- */
+/* --- create a reaction to their input --- */
 
-// compare the input to null
-//  this is to check if they canceled the input
+// declare, init: an empty string
+let reaction = '';
+
+// test: compare the input to null
+//  this is to check if they canceled the prompt
 if (userInput === null) {
-  // alert a sad face
+  // write: a sad face
   //  let the user know how much they have disappointed you
-  alert(':(');
+  reaction = ':(';
 }
-// ? convert the input to lower case and compare it to 'yes'
+// test: convert the input to lower case and compare it to 'yes'
 //   checking the user input to make sure they put in a valid string
 //   this line uses .toLowerCase so that it doesn't matter what letter were upper or lower case
 else if (userInput.toLowerCase() === 'yes') {
-  // alert the user input concatenated with an exclamation mark
+  // write: the input concatenated with an exclamation mark
   //   this is the path for valid user inputs
   //   the user will be congratulated for following instructions
-  alert(userInput + '!');
+  reaction = userInput + '!';
 }
 // the input is not null, and is not 'yes'
 //  they did input something, but it was not correct
 else {
-  // alert the user input concatenated with an exclamation mark
+  // write: baaaad concatenated with the input
   //   this is the path for invalid user inputs (things that aren't some form of "yes")
   //   it will tell users that they messed up baaaaadly
-  alert('baaaaad: ' + userInput);
+  reaction = 'baaaaad: ' + userInput;
 }
+
+/* --- communicate your program's reaction to the user -- */
+
+// call alert: the correct reaction
+//  all the logic is done, nothing left but to alert hte final value of `reaction`
+alert(reaction);
 ```
 
 ---
 
-## Resources
+## More about commenting code
 
 - [better-programming](https://medium.com/better-programming/javascript-clean-code-comments-c926d5aae2cb)
 - [elegantthemes](https://www.elegantthemes.com/blog/wordpress/how-to-comment-your-code-like-a-pro-best-practices-and-good-habits)
+- [4 reasons to comment](https://blog.submain.com/4-reasons-need-code-comments/)
+- [the pros and cons](https://www.techrepublic.com/article/the-pros-and-cons-but-mostly-pros-of-comments-in-code/)
+- [comments in your code](https://medium.com/better-programming/comments-in-your-code-730cfd1dde02)
+- [the good, the bad, the ugly](https://www.freecodecamp.org/news/code-comments-the-good-the-bad-and-the-ugly-be9cc65fbf83/)

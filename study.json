@@ -13,11 +13,6 @@
     "variables": true,
     "highlight": true
   },
-  "parsons": {
-    "run": true,
-    "trace": true,
-    "flowchart": true
-  },
   "highlight": {
     "run": true,
     "trace": {

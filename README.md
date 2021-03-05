@@ -444,22 +444,6 @@ console.log(''.indexOf('hello')); // -1
 ```
 
 </details>
-<details>
-<summary>🐥 .slice</summary>
-
-```js
-console.log('-- string: .slice --');
-
-// with one argument
-
-// with two arguments
-
-// with negative arguments
-
-// with invalid arguments
-```
-
-</details>
 
 ### Variables
 
@@ -1379,21 +1363,6 @@ console.log(randomNumberFromOneToFive); // ?
 
 </details>
 
-<!-- ### Regular Expressions
-
-<details>
-<summary>🐥 </summary>
-
-</details>
-<details>
-<summary>🐥 </summary>
-
-</details>
-<details>
-<summary>🐥 </summary>
-
-</details> -->
-
 </details>
 
 <br>
@@ -1426,7 +1395,11 @@ These two games are deceptively simple. You will be given pseudo-code and will n
 - 🥚 [compute-it](http://compute-it.toxicode.fr/)
 - 🐥 [little-dot](http://little-dot.toxicode.fr/)
 
-<!-- ### What is Programming? -->
+### What is Programming?
+
+- [CodeAcademy](https://www.codecademy.com/articles/what-is-programming)
+- [The Coding Train](https://www.youtube.com/watch?v=AImF__7FyzM)
+- [Practical Introduction to JS](https://shawnr.gitbooks.io/practical-introduction-to-javascript/content/what-is-programming/)
 
 ### What is JavaScript?
 
@@ -1457,7 +1430,6 @@ A selection of tutorial sites with interactive exercises, these tutorial will he
 
 Take a look through these to find the one that helps you the most.
 
-- [javascript.info](https://javascript.info/): through 2.13
 - [programiz](https://www.programiz.com/javascript/get-started): through while loops
 - [sololearn](https://www.sololearn.com/learning/1024): through Conditionals and Loops
 - [launchcode](https://education.launchcode.org/intro-to-professional-web-dev/index.html): chapters 1 -> 5
@@ -1487,10 +1459,11 @@ There's a good reason these have been around forever, they work. Quiz yourself o
 
 The exercises in this module focus on how to read and understand programs that interact with a user. As a programmer you will spend more of your time reading, understanding and adjusting code than you will writing it. So why not start there?
 
-- 🥚 **[reading-code](./reading-code)**:
-- 🐣 **[forest-and-trees](./forest-and-trees)**
-- 🐣 **[parsons-problems](./parsons-problems)**
-- 🐣 **[naming-variables](./naming-variables)**
+- 🥚 **[reading-code](./reading-code)**: Practice reading files of code. This includes identifying variables, tracing code like the computer, drawing on the code, and asking good questions.
+- 🐣 **[forest-and-trees](./forest-and-trees)**: Analyze programs in detail learning to explain what is happening on each line, and explaining how each line contributes to the program's overall behavior.
+- 🐣 **[logging](./logging)**: Learn how to create your own trace of a program's execution using `console.log`. Practice tracing different aspects of the same program's execution.
+- 🐣 **[parsons-problems](./parsons-problems)**: You will be given many lines of code, scrambled out of order. You need to move them back into the correct order and indentation. Careful! there may be some extra lines
+- 🐣 **[naming-variables](./naming-variables)**: Code should be written for people first, computers second. Learn to give helpful names to your variables that describe what data they store and how they are used in your program.
 
 </details>
 <br>
@@ -1501,24 +1474,12 @@ The exercises in this module focus on how to read and understand programs that i
 
 ## Week 1
 
-- skills
-  - reading code
-  - forest and trees
-- JS
-  - comments
-  - logging
-  - primitive types
-  - variables
-  - user input
-  - conditionals
-
 <details>
 <summary>expand/collapse</summary>
 <br>
 
 ### Before Class
 
-- take a look through [Reading Code]()
 - variables, strings & conditions
   - study the reading-code examples
   - tutorial of your choice
@@ -1526,6 +1487,7 @@ The exercises in this module focus on how to read and understand programs that i
   - open this directory: `$ study`
   - navigate to this URL [./?--help](./?--help?)
   - this is the study tool you will use for a lot of HYF
+- take a look through [/reading-code](./reading-code)
 
 ### During Class
 
