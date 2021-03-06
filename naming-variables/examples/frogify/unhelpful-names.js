@@ -3,39 +3,37 @@
   _a: stores the user input
     declaration:
       init: yes
-      typing: object (null)
-      scoping: global
+      types: object (null)
+      scopes: global
     read: 2
-      scoping: global
-      tests: while loop (I/O), for-of (string iteration)
+      scopes: global
+      tests: while, for-of
     write: 1
-      typing: object (null), string
-      scoping: while loop (I/O)
+      types: object (null), string
+      scopes: while
 
   _b: stores the frogified string as it's built
     declaration:
       init: yes
-      typing: string
-      scoping: for-of loop
+      types: string
+      scopes: for-of
     read: 4
-      scoping: conditions inside for-of loop
+      scopes: conditions inside for-of
     write: 3
-      typing: string
-      scoping: inside for-of loop
+      types: string
+      scopes: for-of
 
   _c: declaration once per character in _a
     declaration:
       init: yes
-      typing: string
-      scoping: for-of loop
+      types: string
+      scopes: for-of loop
     read: 3
-      scoping: conditions inside for-of loop
+      scopes: conditions inside for-of
       tests: both conditions inside for-of
     write: 0
 
 */
-
-/* -- gather user input -- */
 
 // _a: declare, null
 let _a = null;
@@ -49,16 +47,12 @@ while (_a === null) {
   );
 }
 
-/* -- generate a new string -- */
-
 // _b: declare, string
 let _b = '';
 
 // _c: declare, string
 // _a: read
 for (let _c of _a) {
-  /* -- append to new string -- */
-
   // _c: read
   if (_c === 'f') {
     // _b: read
@@ -77,8 +71,6 @@ for (let _c of _a) {
     _b = _b + _c;
   }
 }
-
-/* -- communicate the new string -- */
 
 // _b: read
 alert(_b);

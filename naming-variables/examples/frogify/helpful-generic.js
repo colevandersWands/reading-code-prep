@@ -12,8 +12,6 @@
 
 */
 
-/* -- gather user input -- */
-
 let input = null;
 while (input === null) {
   input = prompt(
@@ -23,21 +21,16 @@ while (input === null) {
   );
 }
 
-/* -- generate a new string -- */
-
 let output = '';
 
-for (let nextChar of input) {
-  /* -- append to new string -- */
-  if (nextChar === 'f') {
+for (let next of input) {
+  if (next === 'f') {
     output = output + 'frog';
-  } else if (nextChar === 'F') {
+  } else if (next === 'F') {
     output = output + 'FROG';
   } else {
-    output = output + nextChar;
+    output = output + next;
   }
 }
-
-/* -- communicate the new string -- */
 
 alert(output);

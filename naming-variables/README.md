@@ -1,16 +1,12 @@
 # Naming Variables
 
-Naming things: very hard, very important.
-
-- [Variable Analysis](#variable-analysis)
-- [Variable Roles](#variable-roles)
-- [Naming Conventions](#naming-conventions)
+Your code should be written first for humans, and then for computers. One of the best tools you have for helping humans is to use good variable names.
 
 ---
 
 ## Variable Analysis
 
-The first step to coming up with a good variable name is to understand how it's used. This doesn't need to be a complicated task, there's a few simple questions you can ask to start understanding the variables in a program. To answer the first three questions all you need to do is read the code.
+The first step to coming up with a good variable name is to understand how the variable is used. This doesn't need to be a complicated task, there's a few simple questions you can ask to begin understanding the variables in a program. To answer the first three questions all you need to do is read the code.
 
 This exercise is what's called _static analysis_. You can answer all of these questions _without_ running or tracing the code! (of course you can run it, you just don't need to)
 
@@ -23,8 +19,8 @@ The first things to notice are the simplest, just carefully read the code to not
 
 Taking a closer look at each time a variable is used you can describe them further:
 
-- **Typing**: What types are assigned to this variable? Is there only one type, or does it store different types at different times?
-- **Scoping**: In which scope is this variable declared? In which scopes is it used? Does it store a value that was created in a different scope?
+- **Types**: What types are assigned to this variable? Is there only one type, or does it store different types at different times?
+- **Scopes**: In which scope is this variable declared? In which scopes is it used? Does it store a value that was created in a different scope?
 - **Tests**: Is this variable used in control flow tests? What types of control flow? How often?
 
 Finally you're ready for the big one ...
@@ -35,17 +31,17 @@ In the Naming Variables examples & exercises you will learn a structured approac
 
 ```js
 /*
-  input: used to store the user's input (description)
+  input: used to store the user's input
     declaration:
       init: yes
-      typing: object (null)
-      scoping: global
+      types: object (null)
+      scopes: global
     reads: 2
-      scoping: global, while test
-      tests: while I/O
+      scopes: global
+      tests: while
     writes: 1
-      typing: string, object (null)
-      scoping: while I/O
+      types: string, object (null)
+      scopes: while
 */
 
 // input: init, null
@@ -64,69 +60,26 @@ alert(input);
 
 ## Variable Roles
 
-- http://saja.kapsi.fi/var_roles/stud_vers/stud_Python3_eng.html
-- https://en.wikibooks.org/wiki/A-level_Computing/AQA/Problem_Solving,_Programming,_Data_Representation_and_Practical_Exercise/Fundamentals_of_Programming/The_Role_of_Variables
-- https://stackoverflow.com/questions/12983063/what-is-the-difference-between-a-counter-and-an-accumulator
+The JavaScript language treats variables like a blank slate, you can name them whatever you want and you can assign any value to them. But that doesn't mean all variables in a program are the same. Variables can have very different _roles_ in your program depending on how they're used.
 
-```js
-console.log('-- boolean flags --');
+Learning to identify these roles in code will help understand other people's code and to write your own. Your goal in this chapter is to explore the different roles a variable can play in a program and how you can come up with names that describe not only the values stored in a variable, but also how it's used in the program.
 
-let input = '';
+In this module you will only learn a few different roles, but there are more that you will encounter over your time as a programmer. Learning to use different roles will help you develope more cleanly and effectively. You aren't required to assign a role to each variable in these exercises, but keeping roles in mind will help to think of better names.
 
-let isEmpty = true;
-while (isEmpty) {
-  input = prompt('please enter something');
-  console.log('input:', input);
+Can you think of any other roles whiles studying these exercises?
 
-  if (input === null) {
-    alert('you are a canceler');
-  } else if (input === '') {
-    alert('come on, type something');
-  } else {
-    isEmpty = false;
-  }
-  console.log('isEmpty:', isEmpty);
-}
+- **Fixed Value**: a variable that never changes after initialization
+- **Stepper**: changes systematically, going through a series of values for control flow
+- **Flag**: a boolean variable which can be turned "on" or "off" to control program flow
+- **Gatherer**: combines a series of values into a new value
+- **Holder**: stores one selected value from a series of values
+- **Temporary**: holds a value for a short time, before using it somewhere else
 
-alert('"' + input + '" is something');
-```
+To learn more about roles of variables check out these links:
 
-```js
-console.log('-- while with stepper --');
-
-let input = '';
-
-let isEmpty = true;
-while (isEmpty) {
-  input = prompt('please enter something');
-  console.log('input:', input);
-
-  if (input === null) {
-    alert('you are a canceler');
-  } else if (input === '') {
-    alert('come on, type something');
-  } else {
-    isEmpty = false;
-  }
-  console.log('isEmpty:', isEmpty);
-}
-
-alert('here are the character in: "' + input + '":');
-
-// index is a "stepper" variable
-//  it steps from 0 to a maximum value
-let index = 0;
-while (index < input.length) {
-  console.log('index:', index);
-
-  let character = input[index];
-  console.log('character:', character);
-
-  alert(character);
-
-  input = input + 1;
-}
-```
+- [einarsen](https://www.einarsen.no/variables-and-the-roles-they-play/)
+- [saja.kapsi.fi](http://saja.kapsi.fi/var_roles/stud_vers/stud_Python3_eng.html)
+- [counter vs. accumulator](https://stackoverflow.com/questions/12983063/what-is-the-difference-between-a-counter-and-an-accumulator)
 
 ---
 
@@ -140,5 +93,3 @@ There are no real rules to naming variables but there are some conventions, some
 - [nexTRIE](https://www.youtube.com/watch?v=O5WlRR-lEDE)
 - [Best Practices (swlh)](https://medium.com/swlh/javascript-best-practices-variable-naming-conventions-ea121ca389c5)
 - [Chidre's Tech Tutorials](https://www.youtube.com/watch?v=CZ9iNTLYhfw)
-
----

@@ -12,8 +12,6 @@
 
 */
 
-/* -- gather user input -- */
-
 let toBeFrogged = null;
 while (toBeFrogged === null) {
   toBeFrogged = prompt(
@@ -22,8 +20,6 @@ while (toBeFrogged === null) {
       '- "F" will be replaced with "FROG"'
   );
 }
-
-/* -- generate a new string -- */
 
 let frogged = '';
 
@@ -37,7 +33,5 @@ for (let character of toBeFrogged) {
     frogged = frogged + character;
   }
 }
-
-/* -- communicate the new string -- */
 
 alert(frogged);
