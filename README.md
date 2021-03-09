@@ -1,3 +1,9 @@
+> prep is finished: moved to [hyfbe/welcome-to-js](https://github.com/hackyourfuturebelgium/welcome-to-js)
+
+
+---
+---
+
 # Welcome to JS
 
 [<< UX/UI Design](https://github.com/hackyourfuturebelgium/ux-ui-design) | [Home](https://home.hackyourfuture.be) | [Debugging >>](https://github.com/hackyourfuturebelgium/debugging)
